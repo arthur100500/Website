@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<center><h1 style="font-size: 350%">Скачать текстуры.</h1></center>
+<h2>Как установить?</h2>
+<p style="font-size: 150%">Скачать архив, скинуть все из него в папку, переименовать её в "<b>textures</b>", затем заменить файл дата в архиве с exe файлом, перезапустить игру, или просто запустить, и текстуры поменяются</p>
+
+<div class="col-md6 border rounded">
+	<table border=2 style="background-color:#FFFFFF;" width=100%>
+	{% for item in maps%}
+	<tr>
+	<td width=60%>
+		<h3 style="text-align=center"><b>{{item.name_map}}</b></h3><br>
+        Дата создания - {{item.created_date}}
+		<br>
+		<br>
+		<a class="navbar-brand" href="/downoload_map/{{item.name_map}}" download>Скачать {{item.name_map}}</a>
+	</td>
+	<td width=40%>
+        <img src={{item.file1}} width="50%" height="50%"><img src={{item.file2}} width="50%" height="50%">
+	</td>
+	</tr>
+	{% endfor %}
+	</table>
+</div>
+<br>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center><h1 style="font-size: 350%">Скачать игру</h1></center>
+<h1>Как вы хотите скачать?</h1>
+<div>
+	<h3>Рекоммендуем:</h3>
+	<ul>
+	<li>
+    <a class="navbar-brand" href="static/exe.rar" download>Скачать exe файл в архиве</a>
+	</li>
+	</ul>
+	<h3>Иные способы:</h3>
+	<ul>
+	<li><a class="navbar-brand" href="static/files.rar" download>Скачать файлы игры</a></li>
+    <li><a class="navbar-brand" href="static/game.rar" download>Скачать проект игры</a></li>
+    <li><a class="navbar-brand" href="static/all.rar" download>Скачать все вместе</a></li>
+	</ul>
+</div>
+<center><h1>Инструкция по установке</h1></center>
+<h2>Новый лёгкий способ</h2>
+<p style="font-size: 150%">Легче всего скачать .exe файл <a class="navbar-brand" style="font-size: 100%" href="static/exe.rar" download>тут</a>. Зайти в скачаный архив, и запустить файл SquareClicker.exe, после чего начинайте играть. </p>
+<br>
+<br>
+<h2>Старые способы установки</h2>
+<p style="font-size: 150%">Для того что бы, начать играть, надо иметь Python, а желательно PyCharm.</p>
+<br>
+<br>
+<h3>Если нет Pycharm.</h3>
+<br>
+<p style="font-size: 150%">Тогда вам нужно нажать на "<a class="navbar-brand" style="font-size: 100%" href="https://www.jetbrains.com/pycharm/download/#section=windows" download>Скачать PyCharm</a>",
+    Далее требуется проследовать инструкциям по установке PyCharm и установить программу.</p>
+<br>
+<h3>Если же PyCharm, но нет программы</h3>
+<br>
+<p style="font-size: 150%">Нажимаем на "<a class="navbar-brand" style="font-size: 100%" href="static/game.rar" download>Скачать проект игры</a>".
+    После чего требуется открыть проект через PyCharm, прописать в терминале pip install pygame, и начать играть.</p>
+<br>
+<h3>Возникла какая-то ошибка?</h3>
+<br>
+<p style="font-size: 150%">Нажимаем на "<a class="navbar-brand" style="font-size: 100%" href="static/files.rar" download>Скачать файлы игры</a>"
+    Создаем новый проект в PyCharm, после чего устанавливаем библиотеку pygame. Далее копируем файлы в проект, запускаем main.py и начинаем играть</p>
+<br>
+<h3>Пробная версия</h3>
+<p style="font-size: 150%">Вы можете скачать .exe файл тут: <a class="navbar-brand" style="font-size: 100%" href="static/exe.rar" download>Скачать</a>. После установки разархивируйте скачанный файл в одну папку, запускайте main.exe.</p>
+<h3>Если же файлы самой игры повредились.</h3>
+<br>
+<p style="font-size: 150%">Напишите мне на почту <a style="font-size: 100%" href="vishnevskiy@gmail.com"><b> тут</b></a>, я обязательно отвечу и помогу вам.</p>
+{% endblock %}

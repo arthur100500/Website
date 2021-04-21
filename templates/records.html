@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center><h1 style="font-size: 350%">Рекорды</h1></center>
+<form method="POST" action="{{ url_for('get_one_records') }}">
+    <div>
+        <center>
+            <h1>{{count}}</h1>
+        </center>
+        <table width=80% border="2" align="center">
+            <tr>
+                <td width="10%">
+                    <center><h3>Место</h3></center>
+                </td>
+                <td width="55%"><h3>Имя</h3></td>
+                <td width="35%">
+                    <center><h3>Очки</h3></center>
+                </td>
+            </tr>
+        </table>
+        <!--p>{% for record in records %}-->
+        <!--center><h2>{{record[0].map_name}}</h2></center-->
+        <table width=80% border="1" align="center">
+            {% for item in record %}
+            {%if loop.index % 2 == 0%}
+            <tr>
+                <td width="100%" bgcolor="#b1b8c7">
+                    <center><h4>{{loop.index}}</h4></center>
+                </td>
+                <td width="55%" bgcolor="#b1b8c7"><h4>{{item.user.name}}</h4></td>
+                <td width="35%" bgcolor="#b1b8c7">
+                    <center><h4>{{item.points}}</h4></center>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td width="100%" bgcolor="#cccccc">
+                    <center><h4>{{loop.index}}</h4></center>
+                </td>
+                <td width="55%" bgcolor="#cccccc"><h4>{{item.user.name}}</h4></td>
+                <td width="35%" bgcolor="#cccccc">
+                    <center><h4>{{item.points}}</h4></center>
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+        <!--{% endfor %}-->
+        </p>
+    </div>
+</form>
+{% endblock %}
